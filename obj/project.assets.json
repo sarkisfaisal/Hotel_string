@@ -2784,11 +2784,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sarkis\\Source\\Repos\\Hotel_final_final\\Hotel_final.csproj",
+      "projectUniqueName": "C:\\Users\\Sarkis\\source\\repos\\Hotel_string\\Hotel_final.csproj",
       "projectName": "Hotel_final",
-      "projectPath": "C:\\Users\\Sarkis\\Source\\Repos\\Hotel_final_final\\Hotel_final.csproj",
+      "projectPath": "C:\\Users\\Sarkis\\source\\repos\\Hotel_string\\Hotel_final.csproj",
       "packagesPath": "C:\\Users\\Sarkis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sarkis\\Source\\Repos\\Hotel_final_final\\obj\\",
+      "outputPath": "C:\\Users\\Sarkis\\source\\repos\\Hotel_string\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

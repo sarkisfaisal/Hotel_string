@@ -139,13 +139,13 @@ namespace Hotel_string
         //---------------INICIO CREAR MANTENCIÓN MES------------------------
         public string registrar_mantencion_mes()
         {
-            Console.WriteLine("Ingrese la fecha en la cual se realizó la mantención que desea registrar");
+            Console.WriteLine("Ingrese la fecha en la cual se realizó la mantención que aaaa-mm-dd");
             string fecha = Console.ReadLine();
             Console.WriteLine("Ingrese su observación sobre mantención que se realizó");
             string obs = Console.ReadLine();
            
 
-            mantencion_mes mantencion = new mantencion_mes(obs,fecha);
+            mantencion_mes mantencion = new mantencion_mes(fecha,obs);
             string respuesta = mantencion.insertar();
             return respuesta;
         }

@@ -11,7 +11,7 @@ using System.Reflection.PortableExecutable;
 using Microsoft.Identity.Client;
 using System.Runtime.ConstrainedExecution;
 
-namespace Hotel_final
+namespace Hotel_string
 {
     class Program
     {
@@ -78,13 +78,13 @@ namespace Hotel_final
                         Console.WriteLine("5 Menú proveedores");
                         Console.WriteLine("6 Menú insumos");
                         Console.WriteLine("7 Menú pack");
-                        Console.WriteLine("8 Menú staff");
-                        Console.WriteLine("9 Menú turno");
-                        Console.WriteLine("10 Menú origenes");
-                        Console.WriteLine("11 Menú tipo habitacion");
-                        Console.WriteLine("12 Menú mantenciones");
-                        //Console.WriteLine("12 Menú "):
-                        Console.WriteLine("13 salir");
+                        //Console.WriteLine("8 Menú staff");
+                        Console.WriteLine("8 Menú turno");
+                        Console.WriteLine("9 Menú orrigenes");
+                        Console.WriteLine("10 Menú tipo habitacion");
+                        Console.WriteLine("11 Menú tipo pago");
+                        Console.WriteLine("12 mantencion mes");
+                        Console.WriteLine("30 salir");
                         Console.WriteLine("Ingrese una opción");
                         int op = int.Parse(Console.ReadLine());
 
@@ -113,35 +113,33 @@ namespace Hotel_final
                                 break;
 
                             case 8:
-                                menu_staff();
+
+                                menu_turno();
                                 break;
 
                             case 9:
-                                menu_turno();
+                                menu_origenes();
 
                                 break;  
                             case 10:
-                                menu_origenes();
+                                menu_tipo_habitacion();
                            break;
 
                             case 11:
-                                menu_tipo_habitacion();
+                                menu_staff();
                                 break;
+
                             case 12:
                                 menu_mantencion_mes();
-                                 break;
-
-                           // case 13:
-                                
-                                //break;
-                            case 14:
+                                break;
+                            case 13:
                                 fin = true;
                                 break;
                             default:
                                 break;
                         }
 
-                        if (op == 11)
+                        if (op == 30)
                         {
                             fin = true;
                             Console.WriteLine("hasta luego");
@@ -566,7 +564,6 @@ namespace Hotel_final
         }//fin main
 
     }// fin class program
-
-
+}// fin namespace hotel
 
 

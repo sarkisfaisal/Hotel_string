@@ -286,16 +286,16 @@ namespace Hotel_string
 
                 if (datos.Rows.Count > 0)
                 {
-                    Console.WriteLine("******************************");
+                    Console.WriteLine("***********************************");
                     Console.WriteLine("Listado de mantenciones realizadas ");
-                    Console.WriteLine("******************************");
+                    Console.WriteLine("***********************************");
 
-                    Console.WriteLine("fecha      obs");
-                    Console.WriteLine("------------------");
+                    Console.WriteLine("id       fecha           obs");
+                    Console.WriteLine("----------------------------");
                     int i = 0;
                     foreach (DataRow ren in datos.Rows)
                     {
-                        Console.WriteLine(ren[0] + "\t" + ren[1]);
+                        Console.WriteLine(ren[0] + "\t" + ren[1] + "\t" + ren[2]);
                         i++;
                     }
                 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jk04AiBwaiae0PslRcZm8Kh93+mdOShRJH+aFutNejazVBi2SDNhOd3e9hTJz0UD3SxpBoZU3OJhlv7Wk7/7Vw==",
+  "dgSpecHash": "e4iIhELktYLzV3LYFSDs0W/+4oaz1+EsZNbS8HyqlJFLNHT2754k1H9uoJd1czimfj5hV/Ncje2ouRuqrdG2sw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sarkis\\Source\\Repos\\Hotel_final_final\\Hotel_final.csproj",
+  "projectFilePath": "C:\\Users\\Sarkis\\source\\repos\\Hotel_string\\Hotel_final.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sarkis\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Sarkis\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
