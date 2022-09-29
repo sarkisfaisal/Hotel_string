@@ -73,10 +73,10 @@ namespace Hotel_string
         {
             Console.WriteLine("Ingrese nombre del pack a agregar");
             string tipo = Console.ReadLine();
-            Console.WriteLine("Ingrese fecha del pack a agregar");
-            string fecha = Console.ReadLine();
+            //Console.WriteLine("Ingrese fecha del pack a agregar");
+            //string fecha = Console.ReadLine();
             //DateOnly fecha = new DateOnly(year: DateTime.Now.Year, month: DateTime.Now.Month, day: DateTime.Now.Day);
-            pack P = new pack(tipo, fecha);
+            pack P = new pack(tipo);
             return P.insertar();
         }
         //-----------------FIN CREAR PACK-------------------------------------

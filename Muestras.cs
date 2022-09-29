@@ -142,7 +142,6 @@ namespace Hotel_string
         //--------------------INICIO MOSTRAR PACK----------------------------
         public void mostrar_pack()
         {
-
             DataTable datos = new pack().Listar();
 
             if (datos.Rows.Count > 0)
@@ -151,12 +150,12 @@ namespace Hotel_string
                 Console.WriteLine("Listado de packs");
                 Console.WriteLine("***********************");
 
-                Console.WriteLine("Id      Nombre      Fecha");
-                Console.WriteLine("---------------------------------");
+                Console.WriteLine("Id      Nombre");
+                Console.WriteLine("------------------");
                 int i = 0;
                 foreach (DataRow ren in datos.Rows)
                 {
-                    Console.WriteLine(ren[0] + "\t" + ren[1] + "      " + ren[2]);
+                    Console.WriteLine(ren[0] + "\t" + ren[1]);
                     i++;
                 }
             }

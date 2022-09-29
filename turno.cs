@@ -32,8 +32,29 @@ namespace Hotel_string
             //constructor vacío para acceder a las funciones que no requieran nada 
         }
 
-      
+        public DataTable TraerFila(string Id)
+        {
 
+            DataTable dtt;
+            conexionbd c = new conexionbd();
+            try
+            {
+                dtt = new DataTable();
+                string selectUsuario = $"Select top 1 * from turno where idturno = {Id}";
+                SqlCommand cmd = new SqlCommand(selectUsuario, c.conectarbd);
+                cmd.CommandType = CommandType.Text;
+                c.abrir();
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                adapter.SelectCommand = cmd;
+                adapter.Fill(dtt);
+                c.cerrar();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return dtt;
+        }//fin traer fila
 
 
         public DataTable Listar()
@@ -96,6 +117,23 @@ namespace Hotel_string
             }
         }//fin eliminar
 
+        public string modificar(string tipoAntiguo)
+        {
+            conexionbd c = new conexionbd();
+            try
+            {
+                string insert = $"update turno set tipo = {GetTipo()}  where descripcion = {tipoAntiguo}')";
+                SqlCommand comando = new SqlCommand(insert, c.conectarbd);
+                c.abrir();
+                int com = comando.ExecuteNonQuery();
+                c.cerrar();
+                return "Tipo de turno creado con éxito";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }//fin modificar
 
     }
 }

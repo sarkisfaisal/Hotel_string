@@ -24,6 +24,32 @@ namespace Hotel_string
             return descripcion;
 
         }
+
+        public DataTable TraerFila(string Id)
+        {
+
+            DataTable dtt;
+            conexionbd c = new conexionbd();
+            try
+            {
+                dtt = new DataTable();
+                string selectUsuario = $"Select top 1 * from tipo_pago where idtipo_pago = {Id}";
+                SqlCommand cmd = new SqlCommand(selectUsuario, c.conectarbd);
+                cmd.CommandType = CommandType.Text;
+                c.abrir();
+
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                adapter.SelectCommand = cmd;
+                adapter.Fill(dtt);
+                c.cerrar();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return dtt;
+        }//fin traer fila
+
         //Camila:Esto me va a retornar una variable del tipo data table, que lo que haces es recibir el resultado del select
         //En pocas palabras, sirve para traer datos de la tabla tipo_pagos y esto contendrá la información que traje. 
         public DataTable Listar()
@@ -84,6 +110,24 @@ namespace Hotel_string
                 throw ex;
             }
         }//fin eliminar
+
+        public string modificar(string descripcionAntigua)
+        {
+            conexionbd c = new conexionbd();
+            try
+            {
+                string insert = $"update tipo_pago set descripcion = {Getdescripcion}  where descripcion = {descripcionAntigua}')";
+                SqlCommand comando = new SqlCommand(insert, c.conectarbd);
+                c.abrir();
+                int com = comando.ExecuteNonQuery();
+                c.cerrar();
+                return "Tipo pago creado con éxito";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }//fin modificar
     }
 }
 

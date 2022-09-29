@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
-using Microsoft.IdentityModel.Logging;
 
 namespace Hotel_string
 {
@@ -34,6 +33,31 @@ namespace Hotel_string
         public origen()
         {
             //constructor vacío para acceder a las funciones que no requieran nada 
+        }
+
+        public DataTable TraerFila(string Id)
+        {
+
+            DataTable dtt;
+            conexionbd c = new conexionbd();
+            try
+            {
+                dtt = new DataTable();
+                string selectUsuario = $"Select top 1 * from origen where idorigen = {Id}";
+                SqlCommand cmd = new SqlCommand(selectUsuario, c.conectarbd);
+                cmd.CommandType = CommandType.Text;
+                c.abrir();
+
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                adapter.SelectCommand = cmd;
+                adapter.Fill(dtt);
+                c.cerrar();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return dtt;
         }
 
         public DataTable Listar()
@@ -95,5 +119,23 @@ namespace Hotel_string
                 return ex.Message;
             }
         }//fin eliminar
+
+        public string modificar(string nombreAntiguo)
+        {
+            conexionbd c = new conexionbd();
+            try
+            {
+                string insert = $"update origen set nombre = {getorigen()}  where descripcion = {nombreAntiguo}')";
+                SqlCommand comando = new SqlCommand(insert, c.conectarbd);
+                c.abrir();
+                int com = comando.ExecuteNonQuery();
+                c.cerrar();
+                return "Origen creado con éxito";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }//fin modificar
     }
 }
