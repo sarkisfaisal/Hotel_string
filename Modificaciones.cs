@@ -63,8 +63,8 @@ namespace Hotel_string
             {
                 new Muestras().mostrar_tipo_pago();
                 Console.WriteLine("Ingrese el id del tipo de pago que desea modificar");
-                string id = Console.ReadLine();
-                DataTable datos = new tipo_pago("").TraerFila(id);
+                string idtipo_pago = Console.ReadLine();
+                DataTable datos = new tipo_pago("").TraerFila(idtipo_pago);
                 if (datos.Rows.Count == 0)
                 {
                     Console.WriteLine("No se encontró un tipo de pago con esa descripción");
@@ -82,7 +82,7 @@ namespace Hotel_string
                   int descripcionAntigua = 0;
                     foreach (DataRow fila in datos.Rows)
                     {
-                        //Se obtiene la descripcion antigua del rol a modificar
+                        
                         descripcionAntigua = Convert.ToInt32(fila[0]);
                     }
                     Console.WriteLine("Ingrese una nueva descripción para el tipo de pago que desea modificar");

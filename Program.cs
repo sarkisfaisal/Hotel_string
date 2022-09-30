@@ -78,7 +78,7 @@ namespace Hotel_string
                         Console.WriteLine("7 Menú pack");
                         //Console.WriteLine("8 Menú staff");
                         Console.WriteLine("8 Menú turno");
-                        Console.WriteLine("9 Menú orrigenes");
+                        Console.WriteLine("9 Menú origenes");
                         Console.WriteLine("10 Menú tipo habitacion");
                         Console.WriteLine("11 Menú tipo pago");
                         Console.WriteLine("12 mantencion mes");
@@ -124,7 +124,7 @@ namespace Hotel_string
                            break;
 
                             case 11:
-                                menu_staff();
+                                menu_tipo_pago();
                                 break;
 
                             case 12:
@@ -221,6 +221,7 @@ namespace Hotel_string
                     {
                         case "1":
                             respuesta = new Inserciones().crear_tipo_pago();
+                            Console.WriteLine(respuesta);   
                             break;
                         case "2":
                             respuesta = new Eliminaciones().eliminar_tipo_pago();

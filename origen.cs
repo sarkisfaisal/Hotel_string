@@ -94,7 +94,7 @@ namespace Hotel_string
                 c.abrir();
                 var id = comando.ExecuteScalar();
                 c.cerrar();
-                return "origen creado con exito";
+                return "Origen creado con exito";
             }
             catch (Exception ex)
             {
@@ -107,12 +107,12 @@ namespace Hotel_string
             conexionbd c = new conexionbd();
             try
             {
-                string eliminar = $"delete from origen where nombre = '{getorigen()}'";
+                string eliminar = $"delete from origen where idorigen = '{getorigen()}'";
                 SqlCommand comando = new SqlCommand(eliminar, c.conectarbd);
                 c.abrir();
                 comando.ExecuteNonQuery();
                 c.cerrar();
-                return "origen eliminado con éxito";
+                return "Origen eliminado con éxito";
             }
             catch (Exception ex)
             {

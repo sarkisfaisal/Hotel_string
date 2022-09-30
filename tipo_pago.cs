@@ -84,7 +84,7 @@ namespace Hotel_string
                 string insert = $"insert into tipo_pago values ('{Getdescripcion()}')";
                 SqlCommand comando = new SqlCommand(insert, c.conectarbd);
                 c.abrir();
-                comando.ExecuteNonQuery();
+                int com = comando.ExecuteNonQuery();
                 c.cerrar();
                 return "Tipo de pago creado con éxito";
             }
@@ -98,7 +98,7 @@ namespace Hotel_string
             conexionbd c = new conexionbd();
             try
             {
-                string eliminar = $"delete from tipo_pago = '{Getdescripcion()}'";
+                string eliminar = $"delete from tipo_pago where idtipo_pago  = '{Getdescripcion()}'";
                 SqlCommand comando = new SqlCommand(eliminar, c.conectarbd);
                 c.abrir();
                 int filas = comando.ExecuteNonQuery();
@@ -116,12 +116,12 @@ namespace Hotel_string
             conexionbd c = new conexionbd();
             try
             {
-                string insert = $"update tipo_pago set descripcion = {Getdescripcion}  where idtipo_pago = {descripcionAntigua})";
+                string insert = $"update tipo_pago set descripcion = '{Getdescripcion()}' where idtipo_pago = {descripcionAntigua}";
                 SqlCommand comando = new SqlCommand(insert, c.conectarbd);
                 c.abrir();
                 int com = comando.ExecuteNonQuery();
                 c.cerrar();
-                return "Tipo pago creado con éxito";
+                return "Actualización exitosa...";
             }
             catch (Exception ex)
             {

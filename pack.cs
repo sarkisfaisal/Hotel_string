@@ -107,7 +107,7 @@ namespace Hotel_string
             conexionbd c = new conexionbd();
             try
             {
-                string eliminar = $"delete from pack where descripcion = '{Getdescripcion()}'";
+                string eliminar = $"delete from pack where idpack = '{Getdescripcion()}'";
                 SqlCommand comando = new SqlCommand(eliminar, c.conectarbd);
                 c.abrir();
                 comando.ExecuteNonQuery();

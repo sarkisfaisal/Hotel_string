@@ -24,12 +24,13 @@ namespace Hotel_string
         public string crear_tipo_pago()
         {
             Console.WriteLine("Ingrese la descripción del tipo de pago que desea agregar");
-            string tipo = Console.ReadLine();
-            tipo_pago T = new tipo_pago(tipo);
-            return T.insertar();
+            string tipo_p = Console.ReadLine();
+            tipo_pago tip = new tipo_pago(tipo_p);
+            return tip.insertar();
+             
         }
         //------------------------FIN CREAR TIPO PAGO---------------------------
-
+      
         //-----------------------INICIO PEDIR PAGO-------------------------------
         public int pedir_tipo_pago()
         {

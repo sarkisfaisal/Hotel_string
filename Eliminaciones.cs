@@ -12,7 +12,7 @@ namespace Hotel_string
         //--------------- INICIO ELIMINAR ROL --------------------------
         public string eliminar_rol()
         {
-            Console.WriteLine("Ingrese una descripción para el rol a eliminar");
+            Console.WriteLine("Ingrese el id del rol que desea eliminar");
             string descripcion = Console.ReadLine();
             rol rol = new rol(descripcion);
             string respuesta = rol.Eliminar();
@@ -23,9 +23,10 @@ namespace Hotel_string
         //--------------------INICIO ELIMINAR TIPO PAGO------------------
         public string eliminar_tipo_pago()
         {
-            Console.WriteLine("Ingrese una descripción para el tipo de pago a eliminar");
+            new Muestras().mostrar_tipo_pago();
+            Console.WriteLine("Ingrese el id del tipo de pago a eliminar");
             string descripcion = Console.ReadLine();
-            pago tipo_pago = new pago();
+            tipo_pago tipo_pago = new tipo_pago(descripcion);
             int filas_afectadas = tipo_pago.Eliminar();
             if (filas_afectadas == 0)
             {
@@ -34,7 +35,7 @@ namespace Hotel_string
             }
             else
             {
-                return "Registro eliminado exitosamente";
+                return "Tipo de pago eliminado exitosamente";
             }
         }
         //----------------FIN ELIMINAR TIPO PAGO------------------------
@@ -42,7 +43,7 @@ namespace Hotel_string
         //---------------INICIO ELIMINAR ORIGEN-------------------------
         public string eliminar_origen()
         {
-            Console.WriteLine("Ingrese el nombre del origen a eliminar");
+            Console.WriteLine("Ingrese el id del origen a eliminar");
             string eliminado = Console.ReadLine();
             origen origen = new origen(eliminado);
             return origen.Eliminar();
@@ -54,7 +55,7 @@ namespace Hotel_string
 
         public string eliminar_turno()
         {
-            Console.WriteLine("Ingrese el nombre del turno a eliminar");
+            Console.WriteLine("Ingrese el id del turno a eliminar");
             string eliminado = Console.ReadLine();
 
             turno T = new turno(eliminado);
@@ -66,7 +67,7 @@ namespace Hotel_string
         public string eliminar_pack()
         {
             //mostrar_pack();
-            Console.WriteLine("Ingrese el nombre del pack a eliminar");
+            Console.WriteLine("Ingrese el id del pack a eliminar");
             string eliminado = Console.ReadLine();
             //Console.WriteLine("Ingrese el fecha del pack a eliminar");
             //string fecha = Console.ReadLine();
@@ -80,7 +81,7 @@ namespace Hotel_string
         //------------------INICIO ELIMINAR TIPO_HABITACIÓN------------
         public string eliminar_tipo_habitacion()
         {
-            Console.WriteLine("Ingrese nombre de tipo de habitacion a eliminar");
+            Console.WriteLine("Ingrese el id del tipo de habitacion a eliminar");
             string eliminado = Console.ReadLine();
 
             tipo_habitacion T = new tipo_habitacion(eliminado);
@@ -93,7 +94,7 @@ namespace Hotel_string
 
         public string eliminar_staff()
         {
-            Console.WriteLine("Ingrese la descripción del staff que desea eliminar");
+            Console.WriteLine("Ingrese el id del staff que desea eliminar");
             string eliminado = Console.ReadLine();
 
             staff s = new staff(0, eliminado);
