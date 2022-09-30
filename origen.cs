@@ -55,7 +55,7 @@ namespace Hotel_string
             }
             catch (Exception ex)
             {
-                throw ex;
+                dtt = null;
             }
             return dtt;
         }
@@ -120,17 +120,17 @@ namespace Hotel_string
             }
         }//fin eliminar
 
-        public string modificar(string nombreAntiguo)
+        public string modificar(int nombreAntiguo)
         {
             conexionbd c = new conexionbd();
             try
             {
-                string insert = $"update origen set nombre = {getorigen()}  where descripcion = {nombreAntiguo}')";
+                string insert = $"update origen set nombre = '{getorigen()}'  where idorigen = {nombreAntiguo}";
                 SqlCommand comando = new SqlCommand(insert, c.conectarbd);
                 c.abrir();
                 int com = comando.ExecuteNonQuery();
                 c.cerrar();
-                return "Origen creado con éxito";
+                return "Actualización exitosa...";
             }
             catch (Exception ex)
             {

@@ -20,8 +20,18 @@ namespace Hotel_string
             }
         // ------------------------FIN CREAR ROL--------------------------------
 
-        //----------------------INICIO PEDIR PAGO-------------------------------
-        static int pedirtipo_pago()
+        //----------------------INICIO CREAR TIPO PAGO--------------------------
+        public string crear_tipo_pago()
+        {
+            Console.WriteLine("Ingrese la descripción del tipo de pago que desea agregar");
+            string tipo = Console.ReadLine();
+            tipo_pago T = new tipo_pago(tipo);
+            return T.insertar();
+        }
+        //------------------------FIN CREAR TIPO PAGO---------------------------
+
+        //-----------------------INICIO PEDIR PAGO-------------------------------
+        public int pedir_tipo_pago()
         {
             bool fin = false;
             while (!false)

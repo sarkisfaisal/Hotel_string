@@ -68,10 +68,10 @@ namespace Hotel_string
             //mostrar_pack();
             Console.WriteLine("Ingrese el nombre del pack a eliminar");
             string eliminado = Console.ReadLine();
-            Console.WriteLine("Ingrese el fecha del pack a eliminar");
-            string fecha = Console.ReadLine();
+            //Console.WriteLine("Ingrese el fecha del pack a eliminar");
+            //string fecha = Console.ReadLine();
             //DateOnly fecha = new DateOnly(year: DateTime.Now.Year, month: DateTime.Now.Month, day: DateTime.Now.Day);
-            pack P = new pack(eliminado, fecha);
+            pack P = new pack(eliminado);
             return P.Eliminar();
 
         }

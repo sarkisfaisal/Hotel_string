@@ -51,7 +51,7 @@ namespace Hotel_string
             }
             catch (Exception ex)
             {
-                throw ex;
+                dtt = null;
             }
             return dtt;
         }//fin traer fila
@@ -117,17 +117,17 @@ namespace Hotel_string
             }
         }//fin eliminar
 
-        public string modificar(string tipoAntiguo)
+        public string modificar(int idturno)
         {
             conexionbd c = new conexionbd();
             try
             {
-                string insert = $"update turno set tipo = {GetTipo()}  where descripcion = {tipoAntiguo}')";
+                string insert = $"update turno set tipo = '{GetTipo()}'  where idturno = {idturno}";
                 SqlCommand comando = new SqlCommand(insert, c.conectarbd);
                 c.abrir();
                 int com = comando.ExecuteNonQuery();
                 c.cerrar();
-                return "Tipo de turno creado con éxito";
+                return "Actualización exitosa...";
             }
             catch (Exception ex)
             {

@@ -36,10 +36,17 @@ namespace Hotel_string
                 }
                 else
                 {
-                    string descripcionAntigua = datos.Rows[1].ToString();
+                    string descripcionAntigua = "";
+                    foreach (DataRow fila in datos.Rows)
+                    {
+                        //Se obtiene la descripcion antigua del rol a modificar
+                        descripcionAntigua = fila[1].ToString();
+                    }
                     Console.WriteLine("Ingrese una nueva descripción para el rol que desea modificar");
                     string descripcionNueva = Console.ReadLine();
-                    respuestaFinal = new rol(descripcionNueva).modificar(descripcionAntigua);
+                    string resp = new rol(descripcionNueva).modificar(descripcionAntigua);
+                    respuestaFinal = resp;
+                    fin = false;
                 }
 
             }
@@ -72,10 +79,17 @@ namespace Hotel_string
                 }
                 else
                 {
-                    string descripcionAntigua = datos.Rows[1].ToString();
+                  int descripcionAntigua = 0;
+                    foreach (DataRow fila in datos.Rows)
+                    {
+                        //Se obtiene la descripcion antigua del rol a modificar
+                        descripcionAntigua = Convert.ToInt32(fila[0]);
+                    }
                     Console.WriteLine("Ingrese una nueva descripción para el tipo de pago que desea modificar");
                     string descripcionNueva = Console.ReadLine();
-                    respuestaFinal = new tipo_pago(descripcionNueva).modificar(descripcionAntigua);
+                    string resp = new tipo_pago(descripcionNueva).modificar(descripcionAntigua);
+                    respuestaFinal = resp;
+                    fin = false;
                 }
 
             }
@@ -95,9 +109,9 @@ namespace Hotel_string
             while (fin)
             {
                 new Muestras().mostrar_origenes();
-                Console.WriteLine("Ingrese el nombre del origen que desea modificar");
-                string idorigen = Console.ReadLine();
-                DataTable datos = new rol().TraerFila(idorigen);
+                Console.WriteLine("Ingrese el id del origen que desea modificar");
+               string idorigen = Console.ReadLine();
+                DataTable datos = new origen().TraerFila(idorigen);
                 if (datos.Rows.Count == 0)
                 {
                     Console.WriteLine("No se encontró un origen con ese nombre");
@@ -112,10 +126,16 @@ namespace Hotel_string
                 }
                 else
                 {
-                    string nombreAntiguo = datos.Rows[1].ToString();
+                    int nombreantiguo = 0; 
+                    foreach (DataRow fila in datos.Rows)
+                    {
+                        nombreantiguo = Convert.ToInt32(fila[0]);
+                    }
                     Console.WriteLine("Ingrese un nuevo nombre para el origen que desea modificar");
                     string nombreNuevo = Console.ReadLine();
-                    respuestaFinal = new origen(nombreNuevo).modificar(nombreAntiguo);
+                    string resp = new origen(nombreNuevo).modificar(nombreantiguo);
+                    respuestaFinal = resp;
+                    fin = false;
                 }
 
             }
@@ -130,10 +150,10 @@ namespace Hotel_string
             string respuestaFinal = "Ha ocurrido un error intente nuevamente.";
             while (fin)
             {
-                new Muestras().mostrar_roles();
-                Console.WriteLine("Ingrese el tipo de turno que desea modificar");
-                string idrol = Console.ReadLine();
-                DataTable datos = new rol().TraerFila(idrol);
+                new Muestras().mostrar_turno();
+                Console.WriteLine("Ingrese el id del turno que desea modificar");
+                string idturno = Console.ReadLine();
+                DataTable datos = new turno().TraerFila(idturno);
                 if (datos.Rows.Count == 0)
                 {
                     Console.WriteLine("No se encontró el tipo de turno ingresado");
@@ -148,15 +168,63 @@ namespace Hotel_string
                 }
                 else
                 {
-                    string descripcionAntigua = datos.Rows[1].ToString();
+                    int descripcionAntigua=0;
+                    foreach (DataRow fila in datos.Rows)
+                    {
+                        descripcionAntigua = Convert.ToInt32(fila[0]);
+                    }
                     Console.WriteLine("Ingrese una descripción para el turno a modificar");
                     string descripcionNueva = Console.ReadLine();
-                    respuestaFinal = new turno (descripcionNueva).modificar(descripcionAntigua);
+                    string resp = new turno (descripcionNueva).modificar(descripcionAntigua);
+                    respuestaFinal = resp;
+                    fin = false;
                 }
 
             }
             return respuestaFinal;
         }
         //-------------------------FIN MODIFICAR TURNO------------------------------------
+
+        //------------------------INICIO MODIFICAR PACK-----------------------------------
+        public string modificar_pack()
+        {
+            bool fin = true;
+            string respuestaFinal = "Ha ocurrido un error intente nuevamente.";
+            while (fin)
+            {
+                new Muestras().mostrar_pack();
+                Console.WriteLine("Ingrese el id del pack que desea modificar");
+                string idpack = Console.ReadLine();
+                DataTable datos = new pack().TraerFila(idpack);
+                if (datos.Rows.Count == 0)
+                {
+                    Console.WriteLine("No se encontró la descripcón del pack ingresado");
+                    Console.WriteLine("Pulse cualquier tecla para continuar");
+                    Console.WriteLine("2. Salir");
+                    string opcion = Console.ReadLine();
+                    if (opcion == "2")
+                    {
+                        fin = false;
+                        respuestaFinal = "";
+                    }
+                }
+                else
+                {
+                    int descripcionAntigua=0;
+                    foreach (DataRow fila in datos.Rows)
+                    {
+                       descripcionAntigua = Convert.ToInt32(fila[0]);
+                    }
+                    Console.WriteLine("Ingrese una descripción para el pack a modificar");
+                    string descripcionNueva = Console.ReadLine();
+                    string resp = new pack(descripcionNueva).modificar(descripcionAntigua);
+                    respuestaFinal = resp;
+                    fin = false;
+                }
+
+            }
+            return respuestaFinal;
+        }
+        //-------------------------FIN MODIFICAR PACK-------------------------------------
     }
 }

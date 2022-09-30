@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Runtime.CompilerServices;
 using System.Data;
-using Azure.Core;
 using System.Reflection.PortableExecutable;
-using Microsoft.Identity.Client;
 using System.Runtime.ConstrainedExecution;
 
 namespace Hotel_string
@@ -164,6 +162,7 @@ namespace Hotel_string
                     Console.WriteLine("1 Crear un rol. ");
                     Console.WriteLine("2 Eliminar un rol. ");
                     Console.WriteLine("3 Ver roles existentes. ");
+                    Console.WriteLine("4 Modificar roles existentes. ");
                     Console.WriteLine("0 Salir. ");
                     int opc = int.Parse(Console.ReadLine());
                     string respuesta;
@@ -180,8 +179,11 @@ namespace Hotel_string
                         case 3:
                             new Muestras().mostrar_roles();
                             break;
+                        case 4:
+                            respuesta = new Modificaciones().modificar_rol();
+                            Console.WriteLine(respuesta);
+                            break;
                         case 0:
-
                             break;
                         default:
                             Console.WriteLine("No se reconoce la opción elegida");
@@ -198,6 +200,51 @@ namespace Hotel_string
                 }
 
             }//--------------------FIN MENÚ ROLES---------------------------
+
+            //-------------------INICIO MENÚ TIPO PAGO----------------------
+            static void menu_tipo_pago()
+            {
+                bool fin = true;
+                while (fin)
+                {
+                    Console.WriteLine("*******************************");
+                    Console.WriteLine("Menú administración de tipos de pagos");
+                    Console.WriteLine("*******************************");
+                    Console.WriteLine("1 Crear un tipo de pago. ");
+                    Console.WriteLine("2 Eliminar un tipo de pago. ");
+                    Console.WriteLine("3 Ver los tipos de pagos existentes.");
+                    Console.WriteLine("4 Modificar tipo de pago.");
+                    Console.WriteLine("0 Salir. ");
+                    string opc = Console.ReadLine();
+                    string respuesta;
+                    switch (opc)
+                    {
+                        case "1":
+                            respuesta = new Inserciones().crear_tipo_pago();
+                            break;
+                        case "2":
+                            respuesta = new Eliminaciones().eliminar_tipo_pago();
+                            Console.WriteLine(respuesta);
+                            break;
+                        case "3":
+                            new Muestras().mostrar_tipo_pago();
+                            Console.ReadLine();
+                            break;
+                        case "4":
+                            respuesta = new Modificaciones().modificar_tipo_pago();
+                            Console.WriteLine(respuesta);
+                            break;
+                        case "0":
+                            fin = false;
+                            break;
+                        default:
+                            Console.WriteLine("No se reconoce la opción ingresada, intente nuevamente...");
+                            Console.ReadLine();
+                            break;
+                    }
+                }
+            }
+            //--------------------FIN MENÚ TIPO PAGO------------------------
 
             // -------------------- INICIO ORIGENES-------------------------
             static void menu_origenes()
@@ -230,6 +277,8 @@ namespace Hotel_string
                             Console.ReadLine();
                             break;
                         case "4":
+                            respuesta = new Modificaciones().modificar_origen();
+                            Console.WriteLine(respuesta);
                             break;
                         case "0":
                             fin = false;
@@ -274,6 +323,8 @@ namespace Hotel_string
                             Console.ReadLine();
                             break;
                         case "4":
+                            respuesta = new Modificaciones().modificar_turno();
+                            Console.WriteLine(respuesta);
                             break;
                         case "0":
                             fin = false;
@@ -318,6 +369,8 @@ namespace Hotel_string
                             Console.ReadLine();
                             break;
                         case "4":
+                            respuesta = new Modificaciones().modificar_pack();
+                            Console.WriteLine(respuesta);
                             break;
                         case "0":
                             fin = false;

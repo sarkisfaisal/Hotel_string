@@ -33,7 +33,6 @@ namespace Hotel_string
             {
                 Console.WriteLine("No hay roles registrados");
             }
-            Console.ReadLine();
         }
         // -------------------- FIN MOSTRAR ROLES --------------------------------
         
@@ -56,7 +55,6 @@ namespace Hotel_string
             {
                 Console.WriteLine("No hay tipos de pago registrados");
             }
-            Console.ReadLine();
         }
         //---------------------- FIN MOSTRAR TIPO PAGO ---------------------------
 

@@ -77,7 +77,7 @@ namespace Hotel_string
             }
             catch (Exception ex)
             {
-                throw ex;
+                dtt = null;
             }
             return dtt;
         }
@@ -122,12 +122,12 @@ namespace Hotel_string
             conexionbd c = new conexionbd();
             try
             {
-                string insert = $"update rol set descripcion = {Getdescripcion}  where descripcion = {descripcionAntigua}')";
+                string insert = $"update rol set descripcion = '{Getdescripcion()}'  where descripcion = '{descripcionAntigua}'";
                 SqlCommand comando = new SqlCommand(insert, c.conectarbd);
                 c.abrir();
                 int com = comando.ExecuteNonQuery();
                 c.cerrar();
-                return "Rol creado con éxito";
+                return "Actualización exitosa...";
             }
             catch (Exception ex)
             {

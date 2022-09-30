@@ -110,3 +110,25 @@ C:\Users\Sarkis\source\repos\Hotel_string\bin\Debug\net6.0\runtimes\win\lib\netc
 C:\Users\Sarkis\source\repos\Hotel_string\obj\Debug\net6.0\Hotel_final.csproj.CopyComplete
 C:\Users\Sarkis\source\repos\Hotel_string\obj\Debug\net6.0\Hotel_final.genruntimeconfig.cache
 C:\Users\Sarkis\source\repos\Hotel_string\obj\Debug\net6.0\ref\Hotel_final.dll
+C:\Users\Camila Garcia\Documents\GitHub\Hotel_string\bin\Debug\net6.0\Hotel_final.exe
+C:\Users\Camila Garcia\Documents\GitHub\Hotel_string\bin\Debug\net6.0\Hotel_final.deps.json
+C:\Users\Camila Garcia\Documents\GitHub\Hotel_string\bin\Debug\net6.0\Hotel_final.runtimeconfig.json
+C:\Users\Camila Garcia\Documents\GitHub\Hotel_string\bin\Debug\net6.0\Hotel_final.dll
+C:\Users\Camila Garcia\Documents\GitHub\Hotel_string\bin\Debug\net6.0\Hotel_final.pdb
+C:\Users\Camila Garcia\Documents\GitHub\Hotel_string\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\Camila Garcia\Documents\GitHub\Hotel_string\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Camila Garcia\Documents\GitHub\Hotel_string\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\Camila Garcia\Documents\GitHub\Hotel_string\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\Camila Garcia\Documents\GitHub\Hotel_string\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Camila Garcia\Documents\GitHub\Hotel_string\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Camila Garcia\Documents\GitHub\Hotel_string\obj\Debug\net6.0\Hotel_final.csproj.AssemblyReference.cache
+C:\Users\Camila Garcia\Documents\GitHub\Hotel_string\obj\Debug\net6.0\Hotel_final.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Camila Garcia\Documents\GitHub\Hotel_string\obj\Debug\net6.0\Hotel_final.AssemblyInfoInputs.cache
+C:\Users\Camila Garcia\Documents\GitHub\Hotel_string\obj\Debug\net6.0\Hotel_final.AssemblyInfo.cs
+C:\Users\Camila Garcia\Documents\GitHub\Hotel_string\obj\Debug\net6.0\Hotel_final.csproj.CoreCompileInputs.cache
+C:\Users\Camila Garcia\Documents\GitHub\Hotel_string\obj\Debug\net6.0\Hotel_final.csproj.CopyComplete
+C:\Users\Camila Garcia\Documents\GitHub\Hotel_string\obj\Debug\net6.0\Hotel_final.dll
+C:\Users\Camila Garcia\Documents\GitHub\Hotel_string\obj\Debug\net6.0\refint\Hotel_final.dll
+C:\Users\Camila Garcia\Documents\GitHub\Hotel_string\obj\Debug\net6.0\Hotel_final.pdb
+C:\Users\Camila Garcia\Documents\GitHub\Hotel_string\obj\Debug\net6.0\Hotel_final.genruntimeconfig.cache
+C:\Users\Camila Garcia\Documents\GitHub\Hotel_string\obj\Debug\net6.0\ref\Hotel_final.dll

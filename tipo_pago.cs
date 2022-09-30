@@ -45,7 +45,7 @@ namespace Hotel_string
             }
             catch (Exception ex)
             {
-                throw ex;
+                dtt = null;
             }
             return dtt;
         }//fin traer fila
@@ -111,12 +111,12 @@ namespace Hotel_string
             }
         }//fin eliminar
 
-        public string modificar(string descripcionAntigua)
+        public string modificar(int descripcionAntigua)
         {
             conexionbd c = new conexionbd();
             try
             {
-                string insert = $"update tipo_pago set descripcion = {Getdescripcion}  where descripcion = {descripcionAntigua}')";
+                string insert = $"update tipo_pago set descripcion = {Getdescripcion}  where idtipo_pago = {descripcionAntigua})";
                 SqlCommand comando = new SqlCommand(insert, c.conectarbd);
                 c.abrir();
                 int com = comando.ExecuteNonQuery();
